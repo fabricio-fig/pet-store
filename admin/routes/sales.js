@@ -19,7 +19,7 @@ router.get('/report', async(req, res) => {
       // caso existe um cliente, buscar ele do banco e adiciona no objeto
       sale.client = await knex.table('clients').where('id', '=', sale.client_id).first();
     }
-
+    
     for (const item of sale.items) {
       // para cada item da venda adicionar no item o produto que ele se referencia
       item.product = await knex.table('products').where('id', '=', item.product_id).first();

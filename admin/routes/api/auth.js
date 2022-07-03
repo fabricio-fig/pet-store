@@ -49,7 +49,7 @@ router.post('/client/sign_in', async(req, res) => {
   const conteudoJWT = {
     client: client
   };
-
+  
   // gera um token com o conteúdo (payload) e assinado com o segredoJWT. É atribuído uma expiração de 2 dias para o token.
   const token = jwt.sign(conteudoJWT, segredoJWT, { expiresIn: '2 days' });
 
@@ -69,6 +69,7 @@ router.post('/client/registration', async(req ,res) => {
       message: 'Cliente já existe com esse e-mail'
     });
   }
+
 
   // constroi o objeto com os dados do novo client(incluindo a senha critograda com o bcrypt)
   let newClientData = {

@@ -1,4 +1,3 @@
-
 var express = require('express');
 var router = express.Router();
 
@@ -48,7 +47,8 @@ router.get('/search', async(req, res) => {
   res.json({ products })
 });
 
-// Obtém um produto específico por ID
+
+// Obtem um produto específico por ID
 router.get('/:id', async (req, res) => {
 
   // busca um único produto, restrito por ID e com o nome da categoria no campo categoryName

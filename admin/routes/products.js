@@ -11,7 +11,7 @@ const upload = multer({ dest: './public/images' });
 router.get('/', async (req, res) => {
   const products = await knex.table('products').select();
   for (const product of products) {
-
+    
     product.category = await knex.table('categories').where('id', '=', product.category_id).first()
     console.log(product.category);
   }
