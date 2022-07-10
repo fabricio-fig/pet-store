@@ -1,0 +1,18 @@
+{
+	"name": "PetTopStore",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "vite dev --port 5000",
+		"build": "vite build",
+		"package": "svelte-kit package",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/kit": "next",
+		"svelte": "^3.44.0",
+		"vite": "^2.9.13"
+	},
+	"type": "module"
+}
